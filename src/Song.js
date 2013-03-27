@@ -9,7 +9,11 @@ var Song = Backbone.Model.extend({
   },
 
   addToPlayList: function(){
-      this.trigger('addToPlayList', this);
+  	this.trigger('addToPlayList', this);
+  },
+
+  removeFromList: function() {
+  	this.trigger('removeFromList', this);
   }
 
 });
