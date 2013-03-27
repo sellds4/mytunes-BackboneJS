@@ -1,14 +1,14 @@
 var Song = Backbone.Model.extend({
-  initialize: function(song){
-    this.set('selectedSong', song);
-  },
 
-  play: function(){
+  play: function() {
     this.trigger('play', this);
-
   },
 
-  addToPlayList: function(){
+  ended: function() {
+    this.trigger('ended', this);
+  },
+
+  addToPlayList: function() {
   	this.trigger('addToPlayList', this);
   },
 

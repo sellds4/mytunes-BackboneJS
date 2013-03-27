@@ -9,7 +9,7 @@ var PlaylistView = Backbone.View.extend({
 
   render: function() {
     // TODO: figure out detach stupid, when implementing remove song from playlist
-    // this.$el.children().detach();
+    this.$el.children().detach();
 
     return this.$el.html('<th>Playlist</th>').append(
       this.collection.map(function(song) {
